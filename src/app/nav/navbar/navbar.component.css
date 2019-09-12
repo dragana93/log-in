@@ -1,0 +1,13 @@
+.nav {
+  background: #d1e0e0;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.button-ga {
+}
+
+@media screen and (max-width: 2000px) {
+  .button-ga {
+  }
+}
