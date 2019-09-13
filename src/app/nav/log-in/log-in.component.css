@@ -1,5 +1,13 @@
 .p-ga {
-  padding: 300px;
+  padding: 250px;
+  /* display: flex; */
+  position: relative;
+  top: 2%;
+  left: 28%;
+  margin-top: -50px;
+  margin-left: -100px;
+  /* justify-content: center; */
+  /* text-align: center; */
 }
 
 .example-form {
@@ -10,4 +18,23 @@
 
 .example-full-width {
   width: 100%;
+}
+
+.button-ga {
+  background: #d1e0e0;
+}
+
+@media screen and (max-width: 2000px) {
+  .p-ga {
+  }
+}
+
+.text-ga {
+  text-align: center !important;
+}
+
+.a-ga {
+  left: 28%;
+  /* margin-top: -50px; */
+  margin-left: 130px;
 }

@@ -8,15 +8,23 @@ import { LogInModule } from "./log-in/log-in.module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { LogInComponent } from "./nav/log-in/log-in.component";
 import { RouterModule, Routes } from "@angular/router";
-import { SignUpComponent } from './nav/sign-up/sign-up.component';
+import { SignUpComponent } from "./nav/sign-up/sign-up.component";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, LogInComponent, SignUpComponent],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    LogInComponent,
+    SignUpComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    LogInModule
+    LogInModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,12 +1,28 @@
-<form class="example-form p-ga">
+<form class="example-form p-ga"
+      [formGroup]="profileForm"
+      (ngSubmit)="onSubmit()">
+  <mat-toolbar class="text-ga">
+    <span>LOGIN</span>
+  </mat-toolbar>
   <mat-form-field class="example-full-width">
-    <input matInput
+    <input type="text"
+           matInput
            placeholder="Username"
+           formControlName="username"
            required>
   </mat-form-field>
   <mat-form-field class="example-full-width">
-    <input matInput
+    <input type="text"
+           matInput
            placeholder="Password"
+           formControlName="password"
            required>
   </mat-form-field>
+  <mat-checkbox>Remember Me</mat-checkbox> <a class="a-ga"><b>Forgot password?</b></a>
+  <br />
+  <button mat-button
+          type="submit"
+          [disabled]="!profileForm.valid"
+          class="button-ga">Log In</button>
+  <p> Value: {{ this.profileForm.value | json}} </p>
 </form>
