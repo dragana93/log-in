@@ -5,6 +5,9 @@ import {
   FormBuilder,
   Validators
 } from "@angular/forms";
+import { AuthService } from "src/app/data/services/auth.service";
+import { Observable, Subscription } from "rxjs";
+import { UserModel } from "src/app/data/model/user";
 
 @Component({
   selector: "app-log-in",
@@ -17,20 +20,33 @@ export class LogInComponent implements OnInit {
     password: [""]
   });
 
-  constructor(private fb: FormBuilder) {
+  user$: Subscription;
+
+  constructor(private fb: FormBuilder, private authService: AuthService) {
     this.profileForm = this.createFormGroupWithBuilder(fb);
   }
 
   ngOnInit() {}
-  onSubmit() {
-    console.warn(this.profileForm.controls["username"].value);
-    console.warn(this.profileForm.controls["password"].value);
-  }
 
   createFormGroupWithBuilder(formBuilder: FormBuilder) {
     return formBuilder.group({
       username: ["", Validators.required],
       password: ["", Validators.required]
     });
+  }
+
+  onSubmit() {
+    console.warn(this.profileForm.controls["username"].value);
+    console.warn(this.profileForm.controls["password"].value);
+
+    this.authService
+      .login({
+        username: this.profileForm.controls["username"].value,
+        password: this.profileForm.controls["password"].value
+      })
+      .subscribe(u => {
+        // this.user$ = u;
+        console.log(u);
+      });
   }
 }

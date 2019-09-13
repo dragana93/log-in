@@ -10,6 +10,7 @@ import { LogInComponent } from "./nav/log-in/log-in.component";
 import { RouterModule, Routes } from "@angular/router";
 import { SignUpComponent } from "./nav/sign-up/sign-up.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     BrowserAnimationsModule,
     LogInModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
