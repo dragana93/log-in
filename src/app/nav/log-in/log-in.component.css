@@ -2,9 +2,9 @@
   padding: 250px;
   /* display: flex; */
   position: relative;
-  top: 2%;
+  top: 1%;
   left: 28%;
-  margin-top: -50px;
+  margin-top: -150px;
   margin-left: -100px;
   /* justify-content: center; */
   /* text-align: center; */
@@ -21,7 +21,9 @@
 }
 
 .button-ga {
+  margin-top: 5px;
   background: #d1e0e0;
+  margin-left: 325px;
 }
 
 @media screen and (max-width: 2000px) {
@@ -34,7 +36,7 @@
 }
 
 .a-ga {
-  left: 28%;
+  /* left: 28%; */
   /* margin-top: -50px; */
   margin-left: 130px;
 }
